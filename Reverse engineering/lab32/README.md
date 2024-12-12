@@ -81,33 +81,13 @@ x + y + z + t = 1848
 
 This equation has several solutions, one of which is ```(x=1848, y=0, z=0, t=0)```.
 
-You can find all the solutions to this equation using this code I wrote with ```z3```.
-
-```python
-from z3 import *
-x=Int('x')
-y=Int('y')
-z=Int('z')
-t=Int('t')
-s=Solver()    
-s.add(x + y + z + t == 1848)
-
-s.check()
-while(s.check()==sat):
-	print(s.model()[x])
-	print(s.model()[y])
-	print(s.model()[z])
-	print(s.model()[t])
-	input("Another..")
-```
-
 So, for the second phase, we have to send the numbers ```1848, 0, 0, 0``` as input.
 
 ** Phase3
 
 ![Main](datas/phase3.png)
 
-For this phase, 6 numbers are retrieved in a for loop, added to a node(struc) and then inserted into a string list.
+For this phase, 6 numbers are retrieved in a for loop, added to a node(struc) and then inserted into a linked list.
 
 ![Main](datas/create_node.png)
 
