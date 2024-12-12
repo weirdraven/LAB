@@ -2,6 +2,8 @@
 
 File : [Here](datas/Crypto.zip)
 
+For this challenge, we have the public key key.pub and the key0.enc , key1.enc , key2.enc and key3.enc files
+
 I've written this code to extract the n and the e.
 
 ```python
