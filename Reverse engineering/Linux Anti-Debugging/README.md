@@ -140,9 +140,9 @@ int main() {
 
 ### How It Works
 
-* LD_PRELOAD injects libraries before execution.
+* `LD_PRELOAD` injects libraries before execution.
 
-* LD_LIBRARY_PATH changes library loading paths.
+* `LD_LIBRARY_PATH` changes library loading paths.
 
 ---
 
@@ -214,14 +214,14 @@ int main() {
 
 ### How It Works
 
-* Reads /proc/cpuinfo to check for the hypervisor flag.
+* Reads `/proc/cpuinfo` to check for the `hypervisor` flag.
 
-* If present, the system is likely running inside a VM.
+* If present, the system is likely running inside a `VM`.
 
 ---
 
 ## 7. Using `seccomp` to Restrict Debugging
-Seccomp (Secure Computing Mode) can restrict system calls, preventing the use of debugging tools.
+`Seccomp (Secure Computing Mode)` can restrict system calls, preventing the use of debugging tools.
 
 ### Implementation:
 ```c
@@ -244,7 +244,7 @@ int main() {
 
 ### How It Works
 
-* Enables seccomp in strict mode, allowing only read, write, _exit, and sigreturn system calls.
+* Enables `seccomp` in strict mode, allowing only `read`, `write`, `_exit`, and `sigreturn` system calls.
 
 * Prevents debugging tools from making necessary system calls.
 
