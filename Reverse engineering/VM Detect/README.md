@@ -7,6 +7,8 @@ These methods work across different hypervisors such as VMware, VirtualBox, Hype
 
 ## 1. **Checking CPUID Instructions**
 
+The `CPUID` instruction can be used to query information about the CPU, including whether it is running in a virtualized environment.
+
 ### Assembly (x86-64)
 ```assembly
 mov eax, 1
@@ -232,7 +234,11 @@ ps aux | grep -i "vmtoolsd\|vboxservice\|qemu"
 
 ---
 
+## 10. **Using Anti-VM Tools**
 
+Tools like [VMDetect](https://github.com/PerryWerneck/vmdetect/) or [Pafish](https://github.com/a0rtega/pafish) can automate the detection of virtualized environments.
+
+---
 
 # Notes:
 
