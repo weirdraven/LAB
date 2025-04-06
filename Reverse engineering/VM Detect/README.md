@@ -99,11 +99,6 @@ void check_vm() {
     *(unsigned int*)(vendor + 8) = edx;
     vendor[12] = '\0';
     printf("Hypervisor vendor: %s\n", vendor);
-    if (ebx != 0 || ecx != 0 || edx != 0) {
-        printf("VM detected\n");
-    } else {
-        printf("No VM detected\n");
-    }
 }
 
 int main() {
